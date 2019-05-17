@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jQuery.js"></script>
+    <script src="client.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Salary Calculator</title>
+</head>
+
+<body>
+    <h1>Salary Calculator</h1>
+    <h3 id="addEmployee">Add Employee</h3>
+    <input type="text" placeholder="First Name" id="firstName"></input>
+    <input type="text" placeholder="Last Name" id="lastName"></input>
+    <input type="text" placeholder="ID" id="employeeID"></input>
+    <input type="text" placeholder="Title" id="employeeTitle"></input>
+    <input type="text" placeholder="Annual Salary" id="employeeSalary"></input>
+    <button type="button" id="addSubmit">Submit</button>
+    <table style="100%">
+        <thead>
+        <tbody>
+            
+                <h2>Employees</h2>
+            
+            <th colspan="2">First Name</th>
+            <th>Last Name</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Annual Salary</th>
+            </tr>
+            <tr>
+                <td>Jen</td>
+                <td>Barber</td>
+                <td>4521</td>
+                <td>Team Lead</td>
+                <td>$80,000</td>
+                <td>
+                    <button id="delete1">delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Maurice</td>
+                <td>Moss</td>
+                <td>8725</td>
+                <td>Support Team</td>
+                <td>$58,000</td>
+                <td>
+                    <button id="delete1">delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Roy</td>
+                <td>Smith</td>
+                <td>9623</td>
+                <td>Quality Assurance</td>
+                <td>$48,000</td>
+                <td>
+                    <button id="delete1">delete</button>
+                </td>
+            </tr>
+        </tbody>
+        </thead>
+    </table>
+
+</body>
+
+</html>
