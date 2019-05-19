@@ -64,3 +64,8 @@ function totalSalaries() {
     for (let i = 0; i < allSalaries.length; i++) {
         totalSalaries += Number(allSalaries[i].innerHTML);
     }
+
+    // calculate totalSalaries before/after an employee is 
+    //added and display in the DOM
+    totalSalaries = totalSalaries / 12;
+}
