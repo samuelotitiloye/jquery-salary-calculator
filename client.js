@@ -1,9 +1,12 @@
 $(document).ready(onReady);
 
 function onReady() {
-    // target submit button to collect form info
+    // target submit button to collect form data
     console.log('JQ');
-    $('#addSubmit').on('click', handleAddSubmit)
+    $('#addSubmit').on('click', handleAddSubmit);
+    $('#employeeBody').on('click', '.deleteButton', deleteClick);
+    totalSalaries();
+
 }
 
 // create handleAddSubmit function
@@ -22,23 +25,32 @@ function handleAddSubmit() {
     <td>${lastName}</td>
     <td>${employeeId}</td>
     <td>${employeeTitle}</td>
-    <td>${employeeSalary}</td>
+    <td class="employee-salary">${employeeSalary}</td>
     <td>
-        <button id="delete1">delete</button>
+        <button class="deleteButton">delete</button>
     </td>
     </tr>
     `)
+        // set the 
     $('#firstName').val();
     $('#lastName').val();
     $('#employeeId').val();
     $('#employeeTitle').val();
     $('#employeeSalary').val();
+    // let inputs = $('input');
+    // console.log(inputs);
+
 
     // empty inputs
     $('input').val('');
+    // new total once a new employee is added
+    totalSalaries();
 }
 
+// create a delete function to target each row of data.
 function deleteClick() {
-    console.log('in deleteClick');
-
+    // console.log('in deleteClick');
+    $(this).parent().parent().remove();
+    //call totalSalaries once an employee is removed
+    totalSalaries();
 }
