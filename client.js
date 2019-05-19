@@ -54,3 +54,13 @@ function deleteClick() {
     //call totalSalaries once an employee is removed
     totalSalaries();
 }
+
+// create totalSalaries function
+function totalSalaries() {
+    let allSalaries = $('.employee-salary'); // $ gets all values & stores it in the variable allSalaries[]
+    // console.log(allSalaries)
+    let totalSalaries = 0;
+    // loop through ta
+    for (let i = 0; i < allSalaries.length; i++) {
+        totalSalaries += Number(allSalaries[i].innerHTML);
+    }
