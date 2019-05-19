@@ -66,21 +66,24 @@ function totalSalaries() {
 
     // calculate totalSalaries before/after an employee is 
     //added and display in the DOM
+
     // divide total salaries by 12 to get monthly cost
     totalSalaries = totalSalaries / 12;
+
     // target totalSalaries in the Index file to get the value
     $('#totalSalaries').html(totalSalaries);
+
     // write a conditional to check totalSalaries against 20000
     if (totalSalaries > 20000) {
+
         // set background color to red if totalSalaries > 20k
         $('#totalSalaries').css('background-color', 'red');
     } else {
+
         // set background color to back to white if totalSalaries < 20k
         $('#totalSalaries').css('background-color', 'white');
     }
 }
-
-
 
 // format values' decimals
 // disable submit button if all inputs aren't filled
