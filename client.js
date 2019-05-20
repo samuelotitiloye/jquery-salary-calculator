@@ -44,6 +44,24 @@ function handleAddSubmit() {
     $('input').val('');
     // new total once a new employee is added
     totalSalaries();
+
+    // allow submit button if inputs are filled field
+    if (firstName.length > 0 && lastName.length > 0 && employeeId > 0 && employeeTitle > 0 && employeeSalary > 0) {
+        $('#firstName').val();
+        $('#lastName').val();
+        $('#employeeId').val();
+        $('#employeeTitle').val();
+        $('#employeeSalary').val();
+    } else {
+        // alert if any input field is blank
+        alert('Please fill out required fields');
+        if (firstName.length === 0) {
+            $('#firstName').addClass('error');
+        }
+
+
+    }
+
 }
 
 // create a delete function to target each row of data.
