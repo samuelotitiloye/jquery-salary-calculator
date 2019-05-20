@@ -11,7 +11,7 @@ input {
 }
 
 #addSubmit {
-    background-color: #4caf50;
+    background-color: #4c87af;
     color: white;
     padding: 15px;
     text-align: center;
@@ -44,4 +44,8 @@ h1 {
 
 h2 {
     font-weight: 100;
+}
+
+input.error {
+    border: 3px solid DodgerBlue;
 }

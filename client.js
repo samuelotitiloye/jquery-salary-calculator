@@ -53,16 +53,44 @@ function handleAddSubmit() {
         $('#employeeTitle').val();
         $('#employeeSalary').val();
     } else {
-        // alert if any input field is blank
-        alert('Please fill out required fields');
-        if (firstName.length === 0) {
-            $('#firstName').addClass('error');
-        }
+        // alert if input field is blank & add errorClass border
+        //alert('Please fill out required fields');
 
-
+        //     if (firstName.length === 0) {
+        //         $('#firstName').addClass('error');
+        //         // disable inputs 
+        //         $('input').prop('disabled', true);
+        //     } else {
+        //         $('input').prop('disabled', false)
+        //     }
     }
-
+    if (firstName.length === 0) {
+        $('#firstName').addClass('error');
+    }
+    if (lastName.length === 0) {
+        $('#lastName').addClass('error');
+    }
+    if (employeeId.length === 0) {
+        $('#employeeId').addClass('error');
+    }
+    if (employeeTitle.length === 0) {
+        $('#employeeTitle').addClass('error');
+    }
+    if (employeeSalary.length === 0) {
+        $('#employeeSalary').addClass('error');
+    }
+    //     // disable inputs 
+    //     $('input').prop('disabled', true);
+    // } else {
+    //     $('input').prop('disabled', false)
+    // // }
+    // if (input === 0) {
+    //     $('input').prop('disabled', true);
+    // } else {
+    //     $('input').prop('disabled', false)
+    // }
 }
+
 
 // create a delete function to target each row of data.
 function deleteClick() {
@@ -93,7 +121,6 @@ function totalSalaries() {
 
     // write a conditional to check totalSalaries against 20000
     if (totalSalaries > 20000) {
-
         // set background color to red if totalSalaries > 20k
         $('#totalSalaries').css('background-color', 'red');
     } else {
@@ -101,6 +128,8 @@ function totalSalaries() {
         // set background color to back to white if totalSalaries < 20k
         $('#totalSalaries').css('background-color', 'white');
     }
+    // disable inputs if required fields are not filled
+    // if ()
 }
 
 // format values' decimals
